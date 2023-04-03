@@ -1,0 +1,8 @@
+-- challenge 1 --
+Props
+setting default Props
+props destructuring
+children props
+rendering a list
+handling events
+-------------------
