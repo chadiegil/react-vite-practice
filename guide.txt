@@ -1,8 +1,7 @@
--- challenge 1 --
-Props
-setting default Props
-props destructuring
-children props
-rendering a list
-handling events
--------------------
+-- to use redux toolkit --
+
+first create a redux folder and create a store file
+then define your slices like counterSlice or multiplySlice
+
+link for the guide of redux toolkit
+https://redux-toolkit.js.org/tutorials/quick-start
