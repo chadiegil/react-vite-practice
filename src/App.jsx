@@ -1,23 +1,21 @@
-import "./App.css";
-import Users from "./components/Users";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { increment, decrement, incrementByAmount } from "./redux/counterSlice";
 
-function App() {
+const App = () => {
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
   return (
     <div>
-      <div className="container">
-        <Users name="fpogs" lastname="pogoy" address="putohan" />
-      </div>
-      <div className="container">
-        <Users name="" lastname="" address="" />
-      </div>
-      <div className="container">
-        <Users name="chadie gil" lastname="augis" address="tubigon" />
-      </div>
-      <div className="container">
-        <Users name="" lastname="" address="" />
-      </div>
+      {count}
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
+      <button onClick={() => dispatch(incrementByAmount(50))}>
+        add by value
+      </button>
     </div>
   );
-}
+};
 
 export default App;
